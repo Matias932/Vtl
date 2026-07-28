@@ -351,7 +351,7 @@ function PeopleList({ members, selfId }: { members: Member[]; selfId: string }) 
         {members.map((m) => (
           <li key={m.id} className="flex items-center gap-3 rounded-xl bg-secondary/60 p-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
-              {m.name.slice(0, 1).toUpperCase()}
+              {(m.name?.slice(0, 1) || "").toUpperCase()}
             </div>
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-medium">
