@@ -4,7 +4,7 @@ import { publish, subscribe } from "@/lib/realtime/hub"
 export const dynamic = "force-dynamic"
 export const runtime = "nodejs"
 // Mantenemos el stream abierto el mayor tiempo posible.
-export const maxDuration = 800
+export const maxDuration = 300
 
 /** GET: abre un stream SSE para escuchar los eventos del canal. */
 export async function GET(req: NextRequest) {
