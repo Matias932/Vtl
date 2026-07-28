@@ -12,7 +12,7 @@ export default async function RoomPage({
 
   return (
     <RoomShell
-      code={code.toUpperCase()}
+      code={code?.toUpperCase()}
       name={name?.trim() || "Invitado"}
       isHost={host === "1"}
     />
