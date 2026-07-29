@@ -9,14 +9,14 @@ export default function HomePage() {
 
       const handleCreateHost = () => {
           const newCode = Math.random().toString(36).substring(2, 8).toUpperCase();
-              router.push(`/room/${newCode}?host=1&name=Anfitrión`);
+              router.push(`/?code=${newCode}&host=1&name=Anfitrión`);
                 };
 
                   const handleJoinGuest = (e: React.FormEvent) => {
                       e.preventDefault();
                           if (!roomInput.trim()) return;
                               const cleanCode = roomInput.trim().toUpperCase();
-                                  router.push(`/room/${cleanCode}?host=0&name=Invitado`);
+                                  router.push(`/?code=${cleanCode}&host=0&name=Invitado`);
                                     };
 
                                       return (
